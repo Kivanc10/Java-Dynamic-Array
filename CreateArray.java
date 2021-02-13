@@ -102,7 +102,7 @@ public class CreateArray<Item extends Comparable<Item>> implements Iterable<Item
         for (int i=0;i<arr.length;i++) {
             int min = i;
             for(int j=i+1;j<N;j++) {
-                if (arr[j].compareTo(arr[min]) < 0)
+                if (less(arr[j],arr[min]))
                     min = j;
             }
             swap(i, min);
